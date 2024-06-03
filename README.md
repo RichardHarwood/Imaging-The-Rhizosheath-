@@ -1,4 +1,5 @@
 # Imaging-The-Rhizosheath-
+##### This is a work in progress document being shared in its early stages in case it helps anyone, collaborations are very welcome :)
 
 ## Authors: [Richard Harwood](https://richardharwood.github.io./) and [Devin A. Rippner](https://functionalsoilhealth.com/) 
 
@@ -56,6 +57,19 @@ We segmented the images into 5 classes using a published deep learning workflow.
 </p>
 
 The model is described here [“A workflow for segmenting soil and plant X-ray computed tomography images with deep learning in Google’s Colaboratory”](https://www.frontiersin.org/articles/10.3389/fpls.2022.893140/full)by Rippner et al (2022). We trained the model on google colab (to get acess to an A100 GPU (40gb VRAM). But then downloaded that model and ran the segmentation on the bulk of the data locally (see segment_4x_fcn.ipynb in scripts).
+
+The movie below breaks down what was imaged and segmented.
+| Object:  | Colour: |
+| ------------- | ------------- |
+|  Root | grey |
+| Root Hairs | red |
+| Primary phase consisting of larger particles with undetectable internal porosity|brown|
+| Mixed phase consisting of smaller water-filled pores and solid particles of the silt and clay fractions | pink |
+| Organic Matter  |green |
+
+<p align="center">
+<img  src="images/76_movie_LQ-ezgif.gif" width="600px" height="400"/> 
+</p>
 
 Quantifying traits from segmented images.
 The goal of this imaging was to better understand what causes soil to adhere to plant roots (that is, the rhizosheath). To unpack this we quantified the following:  
