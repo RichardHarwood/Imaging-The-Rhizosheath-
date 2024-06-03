@@ -30,11 +30,68 @@ Plants were grown in a constant temperature room. We chose to explore the follow
 | Barley Baldy  | Barley root hair mutant (no root hairs)  |
 
 Extraction and Sample preparation:
-The root system was delicately removed from a 15mm irrigation riser (custom pot) and gently shaken to separate rhizosphere and bulk soil from the rhizosheath. A representative piece of root with rhizosheath soil was sampled with a razor blade and delicately wrapped in Kapton. 
+The root system was delicately removed from a 15mm irrigation riser (custom pot) and gently shaken to separate rhizosphere and bulk soil from the rhizosheath. 
+<p align="center">
+<img  src="images/rhizosheath.jpg" width="250" height="250"/> 
+</p>
+
+
+A representative piece of root with rhizosheath soil was sampled with a razor blade and delicately wrapped in Kapton. 
 
 <p align="center">
-<img  src="image/kapton wrap.jpg" width="400" height="400"/> 
+<img  src="images/kapton wrap.jpg" width="250" height="250"/> 
 </p>
+
+and then imaged 
+
+<p align="center">
+<img  src="images/mounted.jpg" width="250" height="250"/> 
+</p>
+
+Image segmentation using deep learning: 
+We segmented the images into 5 classes using a published deep learning workflow. The classes were “kapton”, “root”, “mixed phase”, “primary minerals” and “background”.   
+
+<p align="center">
+<img  src="images/ai_fig.png" width="600" height="400"/> 
+</p>
+
+The model is described here [“A workflow for segmenting soil and plant X-ray computed tomography images with deep learning in Google’s Colaboratory”](https://www.frontiersin.org/articles/10.3389/fpls.2022.893140/full)by Rippner et al (2022). We trained the model on google colab (to get acess to an A100 GPU (40gb VRAM). But then downloaded that model and ran the segmentation on the bulk of the data locally (see segment_4x_fcn.ipynb in scripts).
+
+Quantifying traits from segmented images.
+The goal of this imaging was to better understand what causes soil to adhere to plant roots (that is, the rhizosheath). To unpack this we quantified the following:  
+
+| Trait quantified:  | Explanation: |
+| ------------- | ------------- |
+| Rhizosheath volume per root volume| The volume of rhizosheath soil / the volume of root  |
+| Mixed proportion | The proportion of rhizosheath that is “mixed”  |
+| Barley WT | Barley with root hairs  |
+| Proportion touching pore space| Barley The proportion of root surface area touching pore space |
+
+The notebook wrangle_4_x_whitebeam.ipynb documents each analysis step. 
+
+### Results and Discussion: 
+Here we present high resolution “snippets” of the rhizosheath, focussing on the root-soil interface. 
+<p align="center">
+<img  src="images/renders.png" width="500" height="500"/> 
+</p>
+
+
+By definition the soil imaged here should be distinctly different to bulk soil, furthermore it should be slightly different to rhizosheath soil  (that is soil that is as close to the root but fell of the root when gently shaken). A soils overall health is linked, in part, to the size, shape, density and connectiveness of its airspaces. The 3D architecture of a soil influences the rate, flow and retention of water and solutes (Luo et al., 2010). Given the importance of both pores and rhizosheath it is evident that plants need to strike a balance in the amount of soil that covers the root and the porosity of that soil (Schmidt et al. 2012). Root hair length and root hair density would influence this balance. For example, a plant with long and dense root hairs would have an interface with the pores in the rhizosheath (e.g. Duddek et al 2023). Whilst a plant with no root hairs would only have an interface with the soil and pores immediate to the main root.
+<br>
+With a growing body of 3D root-soil data is timely to consider what the “perfect” soil structure looks like. For example, if a soil has large pores, this offers the path of least resistance to an emerging root but offers limited capacity to ensure plant health. Alternatively, soil with small infrequent unconnected pores seems ideal to increase root-soil cover but may lack the appropriate conditions for water transport and microbial well-being. Assumably, in areas where rhizosheath is formed we get a “snapshot” of what an ideal functioning soil structure, that is, a soil which maintains a sufficient network to allow air, water, and nutrients to access the roots and root hairs if present. 
+<br>
+
+The destructive rhizoheath samples had a large range of rhizosheath mass. It is important to note that on such a small scale it is tenuous to compare rhizosheath cover across the plants. Rather, it is a better approach to compare the traits that a generalized to contribute to rhizosheath formation (most notably root hair length and density) to our high resolution 3D models. In theory we would expect that W1 (longer more dense root hairs) would have a higher rhizosheath mass than W16 (shorter less dense root hairs), similarly the Barley WT should have more rhizosheath mass than the brb mutant. Given the minute sub-volume a lot is left to chance compared to a study such as Rabbi et al where entire root systems were investigated. What we capture at this scale is the root-soil interface and that is the results we will discuss. For example, the rhizosheath of W16 plants is on average made up of a lower proportion of mixed phase soil, and in general the proportion of mixed phase is negatively correlated with rhizosheath mass. Interestingly, there is no relationship between the proportion of root that is touch is air  and rhizosheath mass. Perhaps a naïve assumption but one would assume that the more soil actually touching the surface of the plant root would create more opportunity for soil to “stick”, resulting in a greater rhizosheath mass.  
+
+<p align="center">
+<img  src="images/graphs.png" width="500" height="500"/> 
+</p>
+
+
+
+
+
+
 
 
 
