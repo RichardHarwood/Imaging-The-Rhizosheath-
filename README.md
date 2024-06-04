@@ -56,7 +56,7 @@ We segmented the images into 5 classes using a published deep learning workflow.
 <img  src="images/ai_fig.png" width="600" height="400"/> 
 </p>
 
-The model is described here [“A workflow for segmenting soil and plant X-ray computed tomography images with deep learning in Google’s Colaboratory”](https://www.frontiersin.org/articles/10.3389/fpls.2022.893140/full)by Rippner et al (2022). We trained the model on google colab (to get acess to an A100 GPU (40gb VRAM). But then downloaded that model and ran the segmentation on the bulk of the data locally (see segment_4x_fcn.ipynb in scripts).
+The model is described here [“A workflow for segmenting soil and plant X-ray computed tomography images with deep learning in Google’s Colaboratory”](https://www.frontiersin.org/articles/10.3389/fpls.2022.893140/full)by Rippner et al (2022). We trained the model on google colab (to get acess to an A100 GPU (40gb VRAM). But then downloaded that model and ran the segmentation on the bulk of the data locally (see segment_4x_fcn.ipynb in scripts). The same principle applies to the scans of the whole PVC riser at 6.5um except the materials were (“background”, “root”, “soil”, “pore”).  
 
 The movie below breaks down what was imaged and segmented.
 | Object:  | Colour: |
@@ -72,7 +72,7 @@ The movie below breaks down what was imaged and segmented.
 </p>
 
 Quantifying traits from segmented images.
-The goal of this imaging was to better understand what causes soil to adhere to plant roots (that is, the rhizosheath). To unpack this we quantified the following:  
+The goal of this imaging was to better understand what causes soil to adhere to plant roots (that is, the rhizosheath). And how plant roots alter the soil (changes in the rhizosphere) To unpack this we quantified the following:  
 
 | Trait quantified:  | Explanation: |
 | ------------- | ------------- |
