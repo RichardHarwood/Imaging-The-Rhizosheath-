@@ -15,7 +15,7 @@ Rhizosheath formation is underpinned by 4 key processes, in no order: <br>
 4) root hairs <br>
 <br>
 Together these root-soil traits should create an environment that is ideal for plant growth. A simple model of rhizosheath formation is that root hairs navigate the soil pore space and adhere to soil aggregates, the adhesion is secured by mucilage (a sticky substances excreted by the plant roots) and this forms the basis of the rhizosheath. Overtime microorganisms consume exudates creating textural biomaterial along with necro mass which further adds to the rhizosheath formation.   
-stress and limited nutrient availability.
+
 <br>
 The benefit of using a synchrotron for MicroCT is speed. For example, Duddek et al., (2023) needed to cut off their small root chambers prior to scanning. In a conventional desk top CT scanner, the scan time would be so long such that the root and root hairs would desiccate. However, give the scan time is less than 10 minutes the artefacts from a destructive harvest are minimal. Another example of the benefit of using a synchrotron is studying leaves, leaves can be quickly chopped, wrapped in Kapton tape and imaged before they dried out. Here we show how the established methods for imaging leaves can be leveraged to image the rhizosheath. We extract the rhizosheath, quickly and delicately wrap it in Kapton tape and image the rhizosheath, all within a few minutes. We then take this 3D structural information to better understand the mechanisms behind rhizosheath formation. To complement this, we include lower resolution data to compare the rhizosheath to the rhisozphere 
 
