@@ -78,7 +78,6 @@ The goal of this imaging was to better understand what causes soil to adhere to 
 | ------------- | ------------- |
 | Rhizosheath volume per root volume| The volume of rhizosheath soil / the volume of root  |
 | Mixed proportion | The proportion of rhizosheath that is “mixed”  |
-| Barley WT | Barley with root hairs  |
 | Proportion touching pore space| Barley The proportion of root surface area touching pore space |
 
 The notebook wrangle_4_x_whitebeam.ipynb documents each analysis step. 
